@@ -1,0 +1,6 @@
+<% if @shelters = Shelter.all %>
+<% @shelters.each do |shelter| %>
+<b><%= link_to shelter.name, shelter_path(shelter) %></b><br>
+<%= shelter.address %><br>
+<%end%>
+<%end%>

@@ -1,0 +1,6 @@
+<%= form_for :user, url: { action: 'create'} do |f| %>
+<%=f.text_field :name, placeholder: 'Name' %><br>
+<%=f.text_field :email, placeholder: 'Email' %><br>
+<%=f.password_field :password, placeholder: 'Password' %><br>
+<%=f.submit :submit %>
+<% end %>

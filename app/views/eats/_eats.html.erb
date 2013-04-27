@@ -1,0 +1,6 @@
+<%if @eats = Eat.all %>
+<% @eats.each do |eat| %>
+<b><%=link_to eat.name, eat_path(eat) %></b><br>
+<%= eat.address %><br><br>
+<%end%>
+<%end%>

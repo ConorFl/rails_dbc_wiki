@@ -1,0 +1,7 @@
+<h2>Resource</h2>
+<%= form_for :resource, url: {action: 'create'} do |f| %>
+	<%= f.text_field :name, placeholder: 'Title' %><br>
+	<%= f.text_field :url, placeholder: 'URL' %><br>
+	<%= f.text_area :description, placeholder: 'Description' %><br>
+	<%= f.submit 'Create Post' %>
+	<%end%>

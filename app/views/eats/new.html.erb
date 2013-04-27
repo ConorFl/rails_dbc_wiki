@@ -1,0 +1,7 @@
+<h2>Create Post</h2>
+<%=form_for :eat, url: {action: 'create'} do |f| %>
+<%= f.text_field :name, placeholder: "Restaurant name" %>
+<%= f.text_field :address, placeholder: "Restaurant address"%>
+<%= f.text_area :description, placeholder: 'Description' %>
+<%= f.submit 'Submit' %>
+<%end%>

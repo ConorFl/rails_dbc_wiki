@@ -1,0 +1,7 @@
+<% if @resources = Resource.all %>
+<% @resources.each do |resource| %>
+<b><%= link_to resource.name, resource_path(resource) %></b><br>
+<%= resource.url %><br><br>
+<%end%>
+
+<%end%>

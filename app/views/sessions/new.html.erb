@@ -1,0 +1,6 @@
+<b><%= flash[:notice] %></b>
+<%= form_for :session, url: session_path do |f| %>
+	<%=f.text_field :name, placeholder: "Name" %>
+	<%=f.password_field :password, placeholder: "Password" %>
+	<%=f.submit "Login" %>
+	<%end%>

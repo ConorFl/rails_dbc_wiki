@@ -1,0 +1,26 @@
+<div id='nav_wrapper'>
+	<div id='nav'>
+		<div id='left_nav'>
+			<ul>
+				<li><%=link_to "Home", root_path %></li>
+				<% if session[:current_user_id] %>
+					<li><%=link_to "Eats", eats_path %></li>
+					<li><%=link_to "Resources", resources_path %></li>
+					<li><%=link_to "Shelter", shelters_path %></li>
+					<li><%=link_to "New Post", new_post_path %></li>
+				<%end%>
+			</ul>
+		</div>
+		<div id="right_nav">
+			<ul>
+				<% unless session[:current_user_id] %>
+				<li><%=link_to "SignUp", '/signup', id: 'sign-up-button'%></li>
+				<li><%=link_to "Login", '/login'%></li>
+				<% else %>
+				<li><%= link_to "Logout", {controller: 'sessions', action: 'destroy'}, :method => :delete%></li>
+				<% end %>
+			</ul>
+			<br>
+		</div>
+	</div>
+</div>

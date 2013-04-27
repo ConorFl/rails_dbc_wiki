@@ -1,0 +1,7 @@
+<% if @posts = Post.all%>
+<% @posts.each do |post| %>
+<b><%= link_to post.title, post_path(post) %></b>
+ by <%= link_to post.user.name, user_path(post.user) %><br>
+<%= post.content %><br><br>
+<%end%>
+<%end%>
